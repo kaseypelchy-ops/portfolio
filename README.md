@@ -19,7 +19,7 @@ Each featured project explains:
 
 ## Live Portfolio
 
-**[View the interactive portfolio →](https://portfolio-six-virid-qehvif8ymt.vercel.app)**
+**[View the interactive portfolio →](https://kaseys-portfolio.vercel.app)**
 
 ---
 
