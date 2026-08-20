@@ -1,50 +1,66 @@
-# Kasey Pelchy Portfolio
+# Kasey Pelchy — Interactive Portfolio
 
-Multi-page Next.js / TypeScript portfolio for interactive, public-safe case studies.
+A multi-page portfolio built with **Next.js, React, and TypeScript** showcasing work across software engineering, data, analytics, automation, AI, and marketing technology.
 
-## Pages
+The portfolio is designed around interactive technical case studies rather than static project summaries. Each featured project includes the business problem, system architecture, engineering decisions, technology stack, and a synthetic browser-based demonstration of the workflow.
 
-- `/` — portfolio homepage
-- `/projects` — all case studies
-- `/projects/market-recovery`
-- `/projects/fieldos`
-- `/projects/ai-call-quality`
-- `/projects/fiber-mapping`
-- `/projects/seo-aeo`
-- `/about`
-- `/experience`
-- `/contact`
+> Production systems, private data, credentials, proprietary business logic, and confidential operational information are intentionally excluded.
 
-## Interactive demos
+---
 
-Each project page contains a synthetic browser-only demo that communicates the workflow without connecting to any production system or private data.
+## Portfolio
 
-- Market Recovery: market selection, severity, completeness, eligibility, baseline freeze
-- FieldOS: simulated field-sales workflow
-- AI Call Quality: animated asynchronous processing pipeline
-- SEO/AEO: dynamic structured content bundle / rendered result
-- Fiber Mapping: synthetic geometry, bounding box, point-in-polygon, normalized output
+The site includes dedicated pages for:
 
-## Run locally
+- **Market Recovery Intelligence**
+- **Field Sales Operations Platform**
+- **AI Call Quality & Coaching Platform**
+- **Fiber Service Area Mapping Pipeline**
+- **SEO & AEO Content Platform**
 
-```bash
-npm install
-npm run dev
-```
+Additional sections cover:
 
-Then open `http://localhost:3000`.
+- About
+- Experience
+- Technical capabilities
+- Contact
 
-## Validate
+---
 
-```bash
-npm run lint
-npm run build
-```
+## Featured Interactive Case Studies
 
-## Deploy
+### Market Recovery Intelligence
 
-The project is structured for Vercel. Import the GitHub repository into Vercel and deploy with the default Next.js settings.
+A decision-support system for identifying declining markets, evaluating health signals, prioritizing recovery opportunities, and measuring intervention outcomes.
 
-## Public-safe boundary
+The interactive demonstration includes:
 
-This portfolio is intentionally designed as a reconstruction, not a production mirror. Do not add production credentials, customer or employee data, private infrastructure identifiers, confidential pricing, raw operational exports, exact private business rules, or proprietary production code that should remain private.
+- synthetic market selection
+- subscriber and churn signals
+- data completeness
+- severity assessment
+- actionability / eligibility
+- recovery prioritization
+- simulated project creation
+- immutable baseline capture
+
+---
+
+### Field Sales Operations
+
+A simulated field-sales workflow demonstrating how territory, address, offer, installation, and sales processes can be connected through one operational system.
+
+The demo walks through:
+
+```text
+Territory
+    ↓
+Address
+    ↓
+Disposition
+    ↓
+Offer
+    ↓
+Installation
+    ↓
+Sale Submission
