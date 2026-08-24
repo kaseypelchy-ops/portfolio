@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectDemo } from "@/components/ProjectDemo";
 import { PerspectiveToggle } from "@/components/PerspectiveToggle";
+import { ProjectFlywheel } from "@/components/ProjectFlywheel";
 import { getProject, projects } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -35,6 +36,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <section className="page-section compact-top"><div className="container"><PerspectiveToggle business={project.businessProblem} engineering={project.engineeringView} /></div></section>
+
+      <section className="page-section flywheel-section">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">How the system compounds</p>
+            <h2>{project.flywheel.title}</h2>
+            <p>{project.flywheel.description}</p>
+          </div>
+          <ProjectFlywheel flywheel={project.flywheel} accent={project.accent} />
+        </div>
+      </section>
 
       <section className="page-section demo-section">
         <div className="container">
