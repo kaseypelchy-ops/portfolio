@@ -3,6 +3,8 @@ export type Flywheel = {
   title: string;
   description: string;
   steps: string[];
+  forceMultipliers: string[];
+  goodFriction: string[];
 };
 
 export type Project = {
@@ -74,6 +76,18 @@ export const projects: Project[] = [
         "Execute",
         "Measure Response",
         "Improve Market Scoring"
+      ],
+      forceMultipliers: [
+        "Canonical market identity",
+        "Multi-horizon trend analysis",
+        "Coverage-aware scoring",
+        "Deterministic ranking"
+      ],
+      goodFriction: [
+        "Severity separated from actionability",
+        "Lifecycle eligibility rules",
+        "Baseline freezing at project start",
+        "Data completeness tracked separately"
       ]
     }
   },
@@ -126,6 +140,18 @@ export const projects: Project[] = [
         "Installation Lifecycle",
         "Measure Performance",
         "Improve Targeting"
+      ],
+      forceMultipliers: [
+        "Address-centered workflow",
+        "Mobile field execution",
+        "Realtime operational visibility",
+        "Shared installation capacity"
+      ],
+      goodFriction: [
+        "Transactional sale completion",
+        "Capacity validation before scheduling",
+        "Pricing snapshots preserve quoted offers",
+        "Reconciliation fallback protects field data"
       ]
     }
   },
@@ -178,6 +204,18 @@ export const projects: Project[] = [
         "Behavior Change",
         "Improved Experience",
         "New QA Data"
+      ],
+      forceMultipliers: [
+        "Automated call ingestion",
+        "Structured AI evaluation",
+        "Automated coaching workflows",
+        "New QA data feeds the next cycle"
+      ],
+      goodFriction: [
+        "Eligibility checks before analysis",
+        "Idempotent duplicate prevention",
+        "Processing locks and retries",
+        "Deterministic scoring after AI output"
       ]
     }
   },
@@ -230,6 +268,18 @@ export const projects: Project[] = [
         "User Adoption",
         "Collect Operational Data",
         "Improve + Automate"
+      ],
+      forceMultipliers: [
+        "Automated geometry parsing",
+        "Bounding-box candidate reduction",
+        "Exact point-in-polygon matching",
+        "Reusable normalized outputs"
+      ],
+      goodFriction: [
+        "Geometry repair before matching",
+        "Deduplication controls",
+        "Processing locks with stale-lock recovery",
+        "Generation lineage and repeat-upload safety"
       ]
     }
   },
@@ -280,6 +330,18 @@ export const projects: Project[] = [
         "Traffic + Leads",
         "Analyze Performance",
         "Identify Next Opportunity"
+      ],
+      forceMultipliers: [
+        "Search + site data integration",
+        "Opportunity prioritization",
+        "Reusable content generation",
+        "Search + AI visibility feedback"
+      ],
+      goodFriction: [
+        "Relational content governance",
+        "Explicit geographic hierarchy",
+        "Editorial overrides on generated defaults",
+        "Route resolution before publishing"
       ]
     }
   }
