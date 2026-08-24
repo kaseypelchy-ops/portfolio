@@ -1,3 +1,10 @@
+export type Flywheel = {
+  kicker: string;
+  title: string;
+  description: string;
+  steps: string[];
+};
+
 export type Project = {
   slug: string;
   number: string;
@@ -12,6 +19,7 @@ export type Project = {
   github: string;
   liveDemo?: string;
   accent: string;
+  flywheel: Flywheel;
 };
 
 export const projects: Project[] = [
@@ -52,7 +60,22 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "TypeScript", "PostgreSQL", "Supabase", "SQL"],
     github: "https://github.com/kaseypelchy-ops/market-recovery-platform-showcase",
     liveDemo: "https://kaseypelchy-ops.github.io/market-recovery-platform-showcase/",
-    accent: "lime"
+    accent: "lime",
+    flywheel: {
+      kicker: "Continuous recovery loop",
+      title: "Market Intelligence + Recovery",
+      description: "Subscriber evidence identifies risk, investigation shapes the intervention, and measured response improves the next round of market scoring.",
+      steps: [
+        "Subscriber Data",
+        "Identify At-Risk Markets",
+        "Competitive Research",
+        "Root-Cause Analysis",
+        "Select Intervention",
+        "Execute",
+        "Measure Response",
+        "Improve Market Scoring"
+      ]
+    }
   },
   {
     slug: "fieldos",
@@ -89,7 +112,22 @@ export const projects: Project[] = [
     ],
     stack: ["JavaScript", "HTML/CSS", "PostgreSQL", "PL/pgSQL", "Supabase", "Vercel", "Leaflet"],
     github: "https://github.com/kaseypelchy-ops/fieldos-project-showcase",
-    accent: "cyan"
+    accent: "cyan",
+    flywheel: {
+      kicker: "Field learning loop",
+      title: "FieldOS / Door-to-Door",
+      description: "Territory data drives field execution, captured outcomes flow through the installation lifecycle, and performance evidence continuously sharpens targeting.",
+      steps: [
+        "Territory Data",
+        "Assign Sales Reps",
+        "Knock Doors",
+        "Capture Outcomes",
+        "Sale / Follow-Up",
+        "Installation Lifecycle",
+        "Measure Performance",
+        "Improve Targeting"
+      ]
+    }
   },
   {
     slug: "ai-call-quality",
@@ -126,7 +164,22 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "TypeScript", "React", "Next.js", "PostgreSQL", "Supabase", "Google Cloud", "Cloud Tasks", "Vercel"],
     github: "https://github.com/kaseypelchy-ops/ai-call-quality-platform-showcase",
-    accent: "violet"
+    accent: "violet",
+    flywheel: {
+      kicker: "Coaching feedback loop",
+      title: "Customer Service AI Coaching",
+      description: "Every customer interaction becomes structured QA evidence that informs coaching, changes behavior, improves experience, and creates better data for the next evaluation cycle.",
+      steps: [
+        "Customer Interaction",
+        "Conversation Analysis",
+        "QA Scoring",
+        "Identify Strengths + Gaps",
+        "Coaching",
+        "Behavior Change",
+        "Improved Experience",
+        "New QA Data"
+      ]
+    }
   },
   {
     slug: "fiber-mapping",
@@ -163,7 +216,22 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "DuckDB", "SQL", "Shapely", "PyProj", "Google Cloud", "KML/KMZ"],
     github: "https://github.com/kaseypelchy-ops/fiber-service-area-mapping-showcase",
-    accent: "orange"
+    accent: "orange",
+    flywheel: {
+      kicker: "Build-measure-improve loop",
+      title: "Software Development + Automation",
+      description: "The mapping pipeline follows the same operating loop used to build durable internal tools: investigate the workflow, design and deploy the solution, observe real use, then improve and automate the next cycle.",
+      steps: [
+        "Operational Problem",
+        "Investigate Workflow",
+        "Design Solution",
+        "Build Tool",
+        "Deploy",
+        "User Adoption",
+        "Collect Operational Data",
+        "Improve + Automate"
+      ]
+    }
   },
   {
     slug: "seo-aeo",
@@ -198,7 +266,22 @@ export const projects: Project[] = [
     ],
     stack: ["PHP", "WordPress", "PostgreSQL", "PL/pgSQL", "Supabase", "REST APIs", "JSONB", "JSON-LD"],
     github: "https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase",
-    accent: "rose"
+    accent: "rose",
+    flywheel: {
+      kicker: "Search intelligence loop",
+      title: "SEO / AEO Search Intelligence",
+      description: "Search and site evidence surfaces gaps, guides content work, measures search and AI visibility, and turns performance data into the next opportunity.",
+      steps: [
+        "Search + Site Data",
+        "Identify Search Gaps",
+        "Prioritize Opportunities",
+        "Create / Optimize Content",
+        "Search + AI Visibility",
+        "Traffic + Leads",
+        "Analyze Performance",
+        "Identify Next Opportunity"
+      ]
+    }
   }
 ];
 
