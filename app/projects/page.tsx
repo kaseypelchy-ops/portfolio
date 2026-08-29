@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Interactive case studies spanning decision support, field operations, AI, geospatial data, and SEO/AEO."
+  description: "Interactive case studies spanning decision support, field operations, AI, geospatial data, SEO/AEO, and search intelligence."
 };
 
 export default function ProjectsPage() {

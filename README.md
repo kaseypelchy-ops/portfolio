@@ -262,33 +262,33 @@ Python · DuckDB · SQL · Shapely · PyProj · Google Cloud · KML / KMZ · FCC
 
 ---
 
-## SEO & AEO Content Platform
+## SEO, AEO & Search Intelligence Platform
 
-A database-driven SEO and Answer Engine Optimization platform for managing hierarchical and localized web content through PostgreSQL, Supabase, and reusable WordPress templates.
+A production search-operations platform connecting structured website content, technical site health, organic-search performance, optimization workflows, and AI-visibility measurement.
 
-Instead of managing each localized page as an independent collection of CMS fields, the system models pages, geographic hierarchy, services, promotions, keywords, FAQs, content sections, internal links, redirects, metadata, and publishing state as structured relational data.
+The project began as a database-driven SEO and Answer Engine Optimization system. Pages, geographic hierarchy, services, promotions, keywords, FAQs, sections, internal links, redirects, metadata, and publishing state are modeled as relational data and rendered through reusable WordPress templates.
 
-PostgreSQL and PL/pgSQL assemble related records into page-level JSON documents that can be rendered dynamically by reusable templates.
+It has since expanded into a protected Next.js application that combines managed page data, live rendered-site evidence, Google Search Console performance, GA4 AI referral data, Bing AI citation evidence, automated monitoring, prioritization models, internal-link workflows, and optimization experiments.
 
 ### Interactive Demo
 
-The synthetic demonstration shows how structured relational content becomes a web page:
+The synthetic demonstration lets visitors move across the platform's connected operating layers:
 
 ```text
-Relational Content
+Structured Content
         ↓
-Page Bundle
+Publish + Render
         ↓
-Rendered Content
+Search + Site Evidence
         ↓
-Metadata
+Opportunity Intelligence
         ↓
-Internal Links
+Implementation + Verification
         ↓
-Structured Data / JSON-LD
+Outcome Measurement
 ```
 
-Visitors can explore the relationship between the stored content model, generated JSON, rendered page content, and structured metadata.
+Visitors can explore localized publishing, Search Console opportunity evidence, technical health, AI referral and citation measurement, and the combined public-safe evidence object.
 
 ### Selected Engineering Work
 
@@ -296,21 +296,26 @@ Visitors can explore the relationship between the stored content model, generate
 - hierarchical geography
 - JSONB document assembly
 - PL/pgSQL content generation
-- route resolution
-- dynamic metadata
-- structured-data generation
-- reusable templates
-- REST-based publishing
-- SEO architecture
-- AEO architecture
+- reusable WordPress publishing
+- Search Console integration
+- intent and page-ownership intelligence
+- opportunity prioritization
+- content-gap and cannibalization analysis
+- rendered-site health monitoring
+- internal-link execution and verification
+- optimization experiment tracking
+- GA4 AI-referral measurement
+- Bing AI citation intelligence
+- import lineage and pipeline operations
+- explainable scoring and guardrails
 
 ### Technology
 
-PHP · WordPress · PostgreSQL · PL/pgSQL · Supabase · REST APIs · JSONB · JSON-LD
+Next.js · React · TypeScript · PostgreSQL · Supabase · WordPress · PHP · Google Search Console · Google Analytics 4 · Bing Webmaster Tools · REST APIs · JSONB · JSON-LD · Vercel
 
 ### Technical Showcase
 
-[View the SEO & AEO technical showcase →](https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase)
+[View the SEO, AEO & Search Intelligence technical showcase →](https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase)
 
 ---
 
@@ -796,7 +801,7 @@ https://github.com/kaseypelchy-ops/ai-call-quality-platform-showcase
 
 https://github.com/kaseypelchy-ops/fiber-service-area-mapping-showcase
 
-### SEO & AEO Content Platform
+### SEO, AEO & Search Intelligence Platform
 
 https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase
 

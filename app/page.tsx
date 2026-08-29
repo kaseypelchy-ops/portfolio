@@ -40,7 +40,7 @@ export default function HomePage() {
             <article><span>01</span><h3>Software Engineering</h3><p>Full-stack applications, APIs, transactional workflows, internal tools, and operational software.</p></article>
             <article><span>02</span><h3>Data & Analytics</h3><p>PostgreSQL, data modeling, scoring systems, reporting, analytics, and decision-support logic.</p></article>
             <article><span>03</span><h3>Automation & AI</h3><p>LLM pipelines, asynchronous processing, notifications, retries, workflow automation, and monitoring.</p></article>
-            <article><span>04</span><h3>Marketing Technology</h3><p>Field sales, market intelligence, SEO/AEO architecture, customer acquisition, and cross-system integration.</p></article>
+            <article><span>04</span><h3>Marketing Technology</h3><p>Field sales, market intelligence, SEO/AEO, search operations, customer acquisition, and cross-system integration.</p></article>
           </div>
         </div>
       </section>

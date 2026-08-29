@@ -286,62 +286,66 @@ export const projects: Project[] = [
   {
     slug: "seo-aeo",
     number: "05",
-    title: "SEO & AEO Content Platform",
-    eyebrow: "Marketing Technology · PostgreSQL · Content Architecture",
-    shortDescription: "A database-driven SEO/AEO platform that models localized content as structured relational data and renders it through reusable WordPress templates.",
-    summary: "Pages, markets, services, promotions, keywords, FAQs, sections, links, redirects, metadata, and publishing state are modeled in PostgreSQL. Related records are assembled into page-level JSON documents for WordPress to retrieve and render.",
+    title: "SEO, AEO & Search Intelligence",
+    eyebrow: "Marketing Operations · Search Intelligence · Full Stack",
+    shortDescription: "A production search-operations platform connecting structured publishing, site health, organic performance, optimization workflows, and AI visibility.",
+    summary: "The platform began as a database-driven SEO/AEO content system and expanded into a protected search-intelligence application. It connects managed page data, rendered website state, Google Search Console performance, GA4 AI referrals, Bing AI citation evidence, automated monitoring, prioritization models, and closed-loop experiments.",
     businessProblem: [
-      "Localized content became difficult to maintain when every page was independently configured.",
-      "SEO metadata, FAQs, services, geography, and structured data needed shared relationships.",
-      "Publishing needed to remain reusable while supporting market-specific output."
+      "Hundreds of localized pages needed consistent content, metadata, hierarchy, internal links, and structured data without independent maintenance.",
+      "Search, rendered-site, analytics, and AI-visibility evidence lived in separate sources with different meanings.",
+      "Recommendations needed prioritization, operational ownership, verification, and later outcome measurement."
     ],
     engineeringView: [
-      "Model content relationships in PostgreSQL instead of duplicating page fields.",
-      "Represent geographic hierarchy explicitly.",
-      "Generate repeatable defaults while allowing editorial overrides.",
-      "Assemble relational records into page-oriented JSON bundles.",
-      "Resolve routes before rendering reusable WordPress templates.",
-      "Generate metadata and JSON-LD from the same structured source."
+      "Model content and page ownership explicitly before measuring performance.",
+      "Keep managed content state, rendered state, and external evidence separate.",
+      "Preserve source semantics and measurement lineage.",
+      "Distinguish measured zero, unknown, incomplete, and failed states.",
+      "Use deterministic models for intent, ownership, priority, and technical findings.",
+      "Close the loop from recommendation through implementation, verification, and outcome."
     ],
     engineeringWork: [
       "Relational content modeling",
-      "Hierarchical geography",
-      "JSONB document assembly",
-      "PL/pgSQL content generation",
-      "Route resolution",
-      "Dynamic metadata",
-      "Structured-data generation",
-      "Reusable templates",
-      "REST-based publishing"
+      "Reusable WordPress publishing",
+      "Search Console integration",
+      "Intent and ownership intelligence",
+      "Opportunity prioritization",
+      "Content-gap and cannibalization analysis",
+      "Rendered-site health monitoring",
+      "Internal-link execution and verification",
+      "Optimization experiment tracking",
+      "GA4 AI-referral measurement",
+      "Bing AI citation intelligence",
+      "Import lineage and pipeline operations",
+      "Explainable scoring and guardrails"
     ],
-    stack: ["PHP", "WordPress", "PostgreSQL", "PL/pgSQL", "Supabase", "REST APIs", "JSONB", "JSON-LD"],
+    stack: ["Next.js", "React", "TypeScript", "PostgreSQL", "Supabase", "WordPress", "PHP", "Google Search Console", "Google Analytics 4", "Bing Webmaster Tools", "REST APIs", "JSONB", "JSON-LD", "Vercel"],
     github: "https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase",
     accent: "rose",
     flywheel: {
       kicker: "Search intelligence loop",
-      title: "SEO / AEO Search Intelligence",
-      description: "Search and site evidence surfaces gaps, guides content work, measures search and AI visibility, and turns performance data into the next opportunity.",
+      title: "SEO, AEO + Search Intelligence",
+      description: "Structured content creates a governed publishing foundation; search, site, referral, and citation evidence then guide action and measure the next improvement cycle.",
       steps: [
-        "Search + Site Data",
-        "Identify Search Gaps",
-        "Prioritize Opportunities",
-        "Create / Optimize Content",
-        "Search + AI Visibility",
-        "Traffic + Leads",
-        "Analyze Performance",
-        "Identify Next Opportunity"
+        "Structured Content",
+        "Publish + Render",
+        "Collect Evidence",
+        "Diagnose Gaps",
+        "Prioritize Work",
+        "Implement + Verify",
+        "Measure Outcomes",
+        "Improve the Model"
       ],
       forceMultipliers: [
-        "Search + site data integration",
-        "Opportunity prioritization",
-        "Reusable content generation",
-        "Search + AI visibility feedback"
+        "435+ dynamic localized pages",
+        "Search + site evidence integration",
+        "Explainable opportunity scoring",
+        "Search + AI measurement feedback"
       ],
       goodFriction: [
-        "Relational content governance",
-        "Explicit geographic hierarchy",
-        "Editorial overrides on generated defaults",
-        "Route resolution before publishing"
+        "Editorial locks and human review",
+        "Source semantics remain separate",
+        "Zero is distinguished from unknown",
+        "Experiments lock baseline and measurement windows"
       ]
     }
   }
