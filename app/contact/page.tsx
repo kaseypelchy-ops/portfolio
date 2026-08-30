@@ -17,8 +17,8 @@ export default function ContactPage() {
                 <Image
                   src="/kasey-pelchy-profile.webp"
                   alt="Portrait of Kasey Pelchy"
-                  width={800}
-                  height={1000}
+                  width={1000}
+                  height={1200}
                   priority
                 />
               </div>
