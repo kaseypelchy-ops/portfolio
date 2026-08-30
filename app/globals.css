@@ -40,6 +40,15 @@ body::before {
     repeating-linear-gradient(0deg, transparent 0 46px, rgba(22,92,56,.05) 46px 49px, transparent 49px 55px, rgba(118,106,135,.032) 55px 56px, transparent 56px 92px, rgba(166,109,57,.026) 92px 93px);
   mask-image: linear-gradient(to bottom, rgba(0,0,0,.75), transparent 72%);
 }
+.tartan-interaction {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.9) 58%, transparent 84%);
+}
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 a { color: inherit; text-decoration: none; }
 button, select { font: inherit; }
