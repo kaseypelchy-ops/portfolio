@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Connect with Kasey Pelchy on GitHub or LinkedIn."
+  description: "Contact Kasey Pelchy and connect through Cwlwm Systems, GitHub, or LinkedIn."
 };
 
 export default function ContactPage() {
@@ -16,8 +16,10 @@ export default function ContactPage() {
             <p>The public portfolio is intentionally sanitized, but the case studies show the architecture, engineering patterns, and problem-solving approach behind the projects.</p>
           </div>
           <div className="contact-links">
+            <a href="mailto:cwlwmsystems@gmail.com"><span>Email</span><strong>cwlwmsystems@gmail.com ↗</strong></a>
             <a href="https://github.com/kaseypelchy-ops" target="_blank" rel="noreferrer"><span>GitHub</span><strong>Technical showcases ↗</strong></a>
             <a href="https://www.linkedin.com/in/kaseypelchy19/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Professional profile ↗</strong></a>
+            <div className="contact-detail"><span>Location</span><strong>Pennsylvania, United States</strong></div>
           </div>
         </div>
       </div>
