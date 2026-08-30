@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,7 +18,10 @@ export default function ContactPage() {
           </div>
           <div className="contact-links">
             <a href="mailto:cwlwmsystems@gmail.com"><span>Email</span><strong>cwlwmsystems@gmail.com ↗</strong></a>
-            <a href="/cwlwm-systems"><span>Business</span><strong>Cwlwm Systems →</strong></a>
+            <a href="/cwlwm-systems" className="contact-cwlwm-link">
+              <span>Business</span>
+              <strong><Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" /> Cwlwm Systems →</strong>
+            </a>
             <a href="https://github.com/kaseypelchy-ops" target="_blank" rel="noreferrer"><span>GitHub</span><strong>Technical showcases ↗</strong></a>
             <a href="https://www.linkedin.com/in/kaseypelchy19/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Professional profile ↗</strong></a>
             <div className="contact-detail"><span>Location</span><strong>Pennsylvania, United States</strong></div>

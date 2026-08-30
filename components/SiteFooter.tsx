@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function SiteFooter() {
   return (
@@ -9,7 +10,10 @@ export function SiteFooter() {
           <p>Marketing technology, software engineering, data, automation, AI, and operations.</p>
         </div>
         <div className="footer-links">
-          <Link href="/cwlwm-systems">Cwlwm Systems</Link>
+          <Link href="/cwlwm-systems" className="footer-cwlwm-link">
+            <Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" />
+            <span>Cwlwm Systems</span>
+          </Link>
           <a href="mailto:cwlwmsystems@gmail.com">Email ↗</a>
           <a href="https://github.com/kaseypelchy-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/kaseypelchy19/" target="_blank" rel="noreferrer">LinkedIn ↗</a>

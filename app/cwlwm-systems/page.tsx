@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Cwlwm Systems",
@@ -62,11 +63,14 @@ export default function CwlwmSystemsPage() {
           </div>
 
           <div className="cwlwm-brand-card" aria-label="Cwlwm Systems brand mark">
-            <div className="cwlwm-knot" aria-hidden="true">
-              <i /><i /><i /><i />
-            </div>
-            <strong>CWLWM</strong>
-            <span>SYSTEMS</span>
+            <Image
+              src="/cwlwm-systems-logo.png"
+              alt="Cwlwm Systems"
+              width={1917}
+              height={505}
+              className="cwlwm-logo"
+              priority
+            />
             <p><b>Cwlwm</b> · “KULL-um” · knot, tie, bond</p>
           </div>
         </div>
@@ -137,7 +141,13 @@ export default function CwlwmSystemsPage() {
 
       <section className="cwlwm-cta">
         <div className="container cwlwm-cta-inner">
-          <div><p className="eyebrow">Cwlwm Systems</p><h2>Have a process that needs a better system?</h2></div>
+          <div className="cwlwm-cta-copy">
+            <div className="cwlwm-cta-brand">
+              <Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" />
+              <p className="eyebrow">Cwlwm Systems</p>
+            </div>
+            <h2>Have a process that needs a better system?</h2>
+          </div>
           <a className="button primary" href="mailto:cwlwmsystems@gmail.com?subject=Cwlwm%20Systems%20project%20inquiry">cwlwmsystems@gmail.com ↗</a>
         </div>
       </section>

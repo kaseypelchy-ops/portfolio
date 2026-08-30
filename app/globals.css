@@ -84,6 +84,8 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .nav-links a:hover, .footer-links a:hover { color: var(--lime); }
 .nav-cta { justify-self: end; border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; font-size: .88rem; background: rgba(255,255,255,.55); }
 .nav-cta:hover { border-color: rgba(47,125,76,.55); }
+.nav-cta-cwlwm { display: inline-flex; align-items: center; gap: 8px; }
+.nav-cta-cwlwm img { width: 22px; height: 22px; object-fit: contain; flex: 0 0 auto; }
 
 .hero { position: relative; overflow: hidden; padding: 116px 0 96px; border-bottom: 1px solid var(--line); }
 .hero::before {
@@ -181,6 +183,8 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .footer-mark { font-weight: 800; letter-spacing: .08em; }
 .site-footer p { max-width: 520px; color: var(--muted); line-height: 1.6; }
 .footer-links { display: flex; gap: 22px; color: var(--muted); align-items: flex-start; }
+.footer-cwlwm-link { display: inline-flex; align-items: center; gap: 7px; }
+.footer-cwlwm-link img { width: 20px; height: 20px; object-fit: contain; flex: 0 0 auto; }
 
 .page-intro { max-width: 930px; padding: 30px 0 20px; }
 .page-intro h1 { font-size: clamp(2.7rem, 5vw, 4.5rem); }
@@ -353,16 +357,9 @@ select { border: 1px solid var(--line); border-radius: 10px; background: var(--p
 .cwlwm-hero h1 { margin: 0; max-width: 760px; font-size: clamp(3rem, 5.8vw, 5.4rem); line-height: .98; letter-spacing: -.06em; }
 .cwlwm-hero h1 span { color: var(--lime); font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.045em; }
 .cwlwm-lede { max-width: 760px; margin: 28px 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
-.cwlwm-brand-card { min-height: 410px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; border: 1px solid var(--line); border-radius: 30px; background: rgba(255,253,248,.84); box-shadow: 0 24px 70px rgba(35,67,48,.11); }
-.cwlwm-knot { position: relative; width: 120px; height: 120px; margin-bottom: 25px; transform: rotate(45deg); }
-.cwlwm-knot i { position: absolute; width: 62px; height: 62px; border: 7px double var(--forest); border-radius: 19px; }
-.cwlwm-knot i:nth-child(1) { left: 0; top: 0; }
-.cwlwm-knot i:nth-child(2) { right: 0; top: 0; border-color: var(--cyan); }
-.cwlwm-knot i:nth-child(3) { left: 0; bottom: 0; border-color: var(--cyan); }
-.cwlwm-knot i:nth-child(4) { right: 0; bottom: 0; }
-.cwlwm-brand-card > strong { font-size: 2rem; letter-spacing: .18em; }
-.cwlwm-brand-card > span { margin-top: 5px; color: var(--lime); font-size: .76rem; font-weight: 850; letter-spacing: .42em; }
-.cwlwm-brand-card > p { margin: 25px 0 0; color: var(--muted); font-size: .73rem; }
+.cwlwm-brand-card { min-height: 410px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 34px 30px; border: 1px solid var(--line); border-radius: 30px; background: rgba(255,253,248,.84); box-shadow: 0 24px 70px rgba(35,67,48,.11); }
+.cwlwm-logo { width: min(100%, 520px); height: auto; object-fit: contain; }
+.cwlwm-brand-card > p { margin: 28px 0 0; color: var(--muted); font-size: .73rem; }
 .cwlwm-service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .cwlwm-service-grid article { min-height: 340px; padding: 28px; border: 1px solid var(--line); border-radius: 23px; background: rgba(255,253,248,.76); }
 .cwlwm-service-grid article > span, .cwlwm-process-grid article > span { color: var(--lime); font-size: .72rem; font-weight: 850; }
@@ -388,6 +385,9 @@ select { border: 1px solid var(--line); border-radius: 10px; background: var(--p
 .cwlwm-proof-grid b { margin-top: auto; color: var(--lime); font-size: .76rem; }
 .cwlwm-cta { padding: 72px 0; border-top: 1px solid var(--line); background: linear-gradient(100deg, rgba(22,92,56,.1), rgba(255,255,255,.34), rgba(63,117,130,.07)); }
 .cwlwm-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.cwlwm-cta-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.cwlwm-cta-brand img { width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto; }
+.cwlwm-cta-brand .eyebrow { margin: 0; }
 .cwlwm-cta h2 { margin: 0; max-width: 740px; font-size: clamp(2rem, 3.6vw, 3.25rem); line-height: 1.04; letter-spacing: -.045em; }
 
 .contact-page { min-height: 66vh; display: flex; align-items: center; }
@@ -399,6 +399,8 @@ select { border: 1px solid var(--line); border-radius: 10px; background: var(--p
 .contact-links a:hover { color: var(--lime); padding-left: 5px; }
 .contact-links span, .contact-detail span { color: var(--muted); }
 .contact-links strong { overflow-wrap: anywhere; text-align: right; }
+.contact-cwlwm-link strong { display: inline-flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.contact-cwlwm-link strong img { width: 25px; height: 25px; object-fit: contain; flex: 0 0 auto; }
 
 @media (max-width: 960px) {
   .hero-grid, .contact-grid, .two-column, .cwlwm-hero-grid, .cwlwm-fit-grid { grid-template-columns: 1fr; gap: 46px; }
