@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -7,6 +9,7 @@ export function SiteFooter() {
           <p>Marketing technology, software engineering, data, automation, AI, and operations.</p>
         </div>
         <div className="footer-links">
+          <Link href="/cwlwm-systems">Cwlwm Systems</Link>
           <a href="mailto:cwlwmsystems@gmail.com">Email ↗</a>
           <a href="https://github.com/kaseypelchy-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/kaseypelchy19/" target="_blank" rel="noreferrer">LinkedIn ↗</a>

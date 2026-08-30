@@ -14,7 +14,7 @@ export function SiteHeader() {
           <Link href="/skills">Skills</Link>
           <Link href="/contact">Contact</Link>
         </nav>
-        <a className="nav-cta" href="https://github.com/kaseypelchy-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <Link className="nav-cta" href="/cwlwm-systems">Cwlwm Systems</Link>
       </div>
     </header>
   );
