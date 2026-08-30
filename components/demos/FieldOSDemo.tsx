@@ -29,6 +29,14 @@ export function FieldOSDemo() {
   const [completedSteps, setCompletedSteps] = useState(2);
   const location = locations[selectedLocation];
   const workflowComplete = completedSteps >= steps.length;
+  const mapEvents = [
+    { eyebrow: "Location opened", title: location.address, label: "Serviceability", value: location.detail, status: "Ready for disposition" },
+    { eyebrow: "Outcome saved", title: "Some interest", label: "Follow-up", value: "Customer requested offer details", status: "Synced to territory" },
+    { eyebrow: "Offer selected", title: "Fiber Gig", label: "Demo pricing", value: "Approved offer snapshot saved", status: "Ready to schedule" },
+    { eyebrow: "Capacity reserved", title: "Tuesday · 10:00 AM", label: "Install window", value: "Shared slot held for this location", status: "Slot confirmed" },
+    { eyebrow: "Sale submitted", title: "Workflow complete", label: "Next action", value: "Confirmation and review queued", status: "Synced successfully" }
+  ];
+  const mapEvent = mapEvents[Math.min(completedSteps - 2, mapEvents.length - 1)];
 
   function selectLocation(index: number) {
     setSelectedLocation(index);
@@ -48,6 +56,11 @@ export function FieldOSDemo() {
       <div className="fieldos-layout">
         <div className="fake-map" aria-label="Synthetic territory map">
           <div className="map-grid" />
+          <div className="map-area area-a" />
+          <div className="map-area area-b" />
+          <div className="map-road road-a" />
+          <div className="map-road road-b" />
+          <div className="map-road road-c" />
           {locations.map((item, index) => (
             <button
               type="button"
@@ -61,6 +74,18 @@ export function FieldOSDemo() {
             </button>
           ))}
           <div className="map-instruction">Select a location pin</div>
+          <aside className="map-workflow-popup" aria-live="polite" key={`${selectedLocation}-${completedSteps}`}>
+            <div className="map-popup-topline">
+              <span>{mapEvent.eyebrow}</span>
+              <i>{completedSteps} / {steps.length}</i>
+            </div>
+            <strong>{mapEvent.title}</strong>
+            <div className="map-popup-detail">
+              <span>{mapEvent.label}</span>
+              <p>{mapEvent.value}</p>
+            </div>
+            <div className="map-popup-status"><b />{mapEvent.status}</div>
+          </aside>
           <span className="map-label">Demo Territory 07 · 3 fictional locations</span>
         </div>
         <div className="field-panel">
