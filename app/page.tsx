@@ -13,7 +13,7 @@ export default function HomePage() {
             <p className="hero-lede">I design and build operational platforms that connect people, process, data, and existing software. The portfolio is organized around reusable business patterns so the work is understandable beyond the industry where each system was first built.</p>
             <div className="hero-actions">
               <Link className="button primary" href="/projects">Explore system patterns</Link>
-              <Link className="button secondary" href="/cwlwm-systems">Cwlwm Systems</Link>
+              <a className="button secondary" href="https://cwlwmsystems.vercel.app" target="_blank" rel="noreferrer">Visit Cwlwm Systems ↗</a>
             </div>
           </div>
 

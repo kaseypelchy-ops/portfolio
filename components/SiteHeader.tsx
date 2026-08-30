@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const cwlwmUrl = "https://cwlwmsystems.vercel.app";
+
 export function SiteHeader() {
   return (
     <header className="site-header">
@@ -15,10 +17,10 @@ export function SiteHeader() {
           <Link href="/skills">Skills</Link>
           <Link href="/contact">Contact</Link>
         </nav>
-        <Link className="nav-cta nav-cta-cwlwm" href="/cwlwm-systems">
+        <a className="nav-cta nav-cta-cwlwm" href={cwlwmUrl} target="_blank" rel="noreferrer">
           <Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" />
-          <span>Cwlwm Systems</span>
-        </Link>
+          <span>Cwlwm Systems ↗</span>
+        </a>
       </div>
     </header>
   );

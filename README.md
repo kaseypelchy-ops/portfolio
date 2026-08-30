@@ -13,4 +13,4 @@ The goal is to make the work understandable to employers and prospective Cwlwm S
 
 ## Cwlwm Systems
 
-Cwlwm Systems is positioned as an independent systems studio that builds the systems between the systems: custom operational software connecting people, process, data, automation, AI, and existing business tools.
+Cwlwm Systems is the independent company behind the business-facing services. Portfolio links point to the live company website at https://cwlwmsystems.vercel.app.
