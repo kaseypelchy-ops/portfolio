@@ -56,9 +56,9 @@ export function TartanInteraction() {
         const x = cell.column * CELL_SIZE;
         const y = cell.row * CELL_SIZE;
 
-        drawingContext.fillStyle = `rgba(22, 92, 56, ${0.19 * opacity})`;
+        drawingContext.fillStyle = `rgba(2, 89, 45, ${0.17 * opacity})`;
         drawingContext.fillRect(x + 1.5, y + 1.5, CELL_SIZE - 3, CELL_SIZE - 3);
-        drawingContext.strokeStyle = `rgba(63, 117, 130, ${0.2 * opacity})`;
+        drawingContext.strokeStyle = `rgba(200, 0, 20, ${0.10 * opacity})`;
         drawingContext.lineWidth = 1;
         drawingContext.strokeRect(x + 2, y + 2, CELL_SIZE - 4, CELL_SIZE - 4);
       });
