@@ -11,9 +11,13 @@ export type Project = {
   slug: string;
   number: string;
   title: string;
+  implementationName: string;
   eyebrow: string;
   shortDescription: string;
   summary: string;
+  systemPattern: string;
+  applications: string[];
+  businessValue: string[];
   businessProblem: string[];
   engineeringView: string[];
   engineeringWork: string[];
@@ -28,19 +32,28 @@ export const projects: Project[] = [
   {
     slug: "market-recovery",
     number: "01",
-    title: "Market Recovery Intelligence",
-    eyebrow: "Decision Support · Data Engineering · Full Stack",
-    shortDescription: "A full-stack market-intelligence platform for identifying decline, prioritizing recovery opportunities, and measuring intervention outcomes.",
-    summary: "Operational acquisition, churn, subscriber history, market identity, lifecycle state, and recovery-project data are normalized into a canonical analytical model. Multi-horizon signals feed coverage-aware scoring, a separate policy layer determines actionability, and eligible markets are ranked deterministically for investigation.",
+    title: "Market Performance Intelligence System",
+    implementationName: "Market Recovery Intelligence",
+    eyebrow: "Decision Intelligence · Prioritization · Full Stack",
+    shortDescription: "A decision-support system for finding underperforming regions, locations, or business units, prioritizing intervention, and measuring whether the response worked.",
+    summary: "This system pattern turns fragmented performance data into a consistent way to identify where attention is needed, distinguish severity from actionability, prioritize investigation, launch an intervention, and preserve a baseline for later measurement. The original implementation focused on geographic markets, but the architecture applies anywhere a business manages many comparable units.",
+    systemPattern: "Turn distributed performance signals into a ranked, measurable intervention workflow.",
+    applications: ["Multi-location businesses", "Franchise operations", "Regional sales", "Service territories", "Retail networks", "Portfolio management"],
+    businessValue: [
+      "Focus leadership attention on the units most likely to need intervention.",
+      "Replace inconsistent judgment with explainable, repeatable prioritization.",
+      "Separate a poor score from whether the business is actually ready to act.",
+      "Measure improvement against a frozen baseline instead of moving history."
+    ],
     businessProblem: [
-      "Declining markets were difficult to compare consistently across multiple data sources.",
-      "Analytical severity and operational actionability needed to remain separate.",
-      "Recovery work needed a durable baseline so results could be measured without rewriting history."
+      "Performance data often lives in different systems and cannot be compared consistently across locations, regions, teams, or business units.",
+      "A weak performance signal does not automatically mean a unit is actionable; eligibility, lifecycle, capacity, or evidence quality may change the decision.",
+      "Improvement work needs a durable before-and-after baseline so leaders can tell whether an intervention actually changed the outcome."
     ],
     engineeringView: [
       "Normalize operational evidence before analytical computation.",
-      "Resolve records to a canonical market identity.",
-      "Derive multi-horizon market-health signals.",
+      "Resolve records to a canonical unit of analysis.",
+      "Derive multi-horizon health and performance signals.",
       "Normalize scoring over available evidence while tracking completeness separately.",
       "Apply lifecycle and workflow policy after scoring.",
       "Rank only eligible candidates deterministically.",
@@ -64,28 +77,28 @@ export const projects: Project[] = [
     liveDemo: "https://kaseypelchy-ops.github.io/market-recovery-platform-showcase/",
     accent: "lime",
     flywheel: {
-      kicker: "Continuous recovery loop",
-      title: "Market Intelligence + Recovery",
-      description: "Subscriber evidence identifies risk, investigation shapes the intervention, and measured response improves the next round of market scoring.",
+      kicker: "Continuous improvement loop",
+      title: "Performance Intelligence + Intervention",
+      description: "Operational evidence identifies underperformance, investigation shapes the response, and measured outcomes improve the next round of prioritization.",
       steps: [
-        "Subscriber Data",
-        "Identify At-Risk Markets",
-        "Competitive Research",
+        "Performance Data",
+        "Identify Underperformance",
+        "Investigate Drivers",
         "Root-Cause Analysis",
         "Select Intervention",
         "Execute",
-        "Measure Response",
-        "Improve Market Scoring"
+        "Measure Impact",
+        "Improve Prioritization"
       ],
       forceMultipliers: [
-        "Canonical market identity",
+        "Canonical unit identity",
         "Multi-horizon trend analysis",
         "Coverage-aware scoring",
         "Deterministic ranking"
       ],
       goodFriction: [
         "Severity separated from actionability",
-        "Lifecycle eligibility rules",
+        "Lifecycle and eligibility rules",
         "Baseline freezing at project start",
         "Data completeness tracked separately"
       ]
@@ -94,63 +107,72 @@ export const projects: Project[] = [
   {
     slug: "fieldos",
     number: "02",
-    title: "FieldOS",
-    eyebrow: "Operational Software · Sales Technology · Full Stack",
-    shortDescription: "An address-centered field-sales operations platform connecting canvassing, pricing, scheduling, sales, post-sale review, and management reporting.",
-    summary: "FieldOS gives representatives a mobile workflow while operations and leadership receive centralized visibility into sales activity, installation capacity, territory performance, lifecycle outcomes, and operational trends.",
+    title: "Field Operations & Sales Management Platform",
+    implementationName: "FieldOS",
+    eyebrow: "Operational Software · Distributed Teams · Full Stack",
+    shortDescription: "A configurable platform for coordinating distributed field teams, customer or location activity, scheduling, conversion, fulfillment, and management visibility.",
+    summary: "This system pattern gives people in the field a focused mobile workflow while operations and leadership receive one view of activity, capacity, outcomes, and follow-through. The original implementation supported field sales, but the same architecture fits any organization coordinating people who work across locations and need reliable handoffs back to central operations.",
+    systemPattern: "Connect field activity to scheduling, fulfillment, reporting, and the next operational decision.",
+    applications: ["Home services", "Solar & roofing", "Utilities", "Property services", "Field sales", "Franchise operations"],
+    businessValue: [
+      "Give field teams one guided workflow instead of disconnected forms, maps, spreadsheets, and messages.",
+      "Create shared visibility into who visited what, what happened, and what should happen next.",
+      "Prevent overbooking by treating appointment or fulfillment capacity as shared operational state.",
+      "Connect frontline activity to downstream fulfillment and management reporting."
+    ],
     businessProblem: [
-      "Field activity, serviceable locations, scheduling, pricing, and sales review lived across disconnected workflows.",
-      "Representatives needed reliable mobile workflows in areas with weak connectivity.",
-      "Operations needed shared installation capacity and trustworthy post-sale visibility."
+      "Distributed teams often work across maps, spreadsheets, forms, scheduling tools, and messaging channels that do not share a single operational record.",
+      "Field users need workflows that remain usable when connectivity is weak or inconsistent.",
+      "Operations needs trustworthy shared capacity, lifecycle status, and post-activity visibility rather than manual reconciliation."
     ],
     engineeringView: [
-      "Use the service location as the operational anchor.",
-      "Keep approved offers data-driven and preserve what was quoted at sale time.",
-      "Treat installation capacity as shared database state.",
+      "Use the customer, asset, property, or service location as the operational anchor.",
+      "Keep approved offers and configuration data-driven while preserving what was selected at transaction time.",
+      "Treat appointment or fulfillment capacity as shared database state.",
       "Preserve unsynced field work through connectivity and deployment changes.",
-      "Keep completed sales transactional and partial opportunities separate.",
+      "Keep completed transactions and partial opportunities as separate lifecycle states.",
       "Use realtime as an accelerator with reconciliation fallback."
     ],
     engineeringWork: [
-      "Transactional sales workflows",
+      "Transactional field workflows",
       "PWA/offline synchronization",
       "Realtime reconciliation",
-      "Installation-capacity management",
-      "Pricing snapshots",
-      "Duplicate-safe customer notifications",
+      "Shared-capacity management",
+      "Configuration snapshots",
+      "Duplicate-safe notifications",
       "Lifecycle tracking",
       "PostgreSQL functions",
       "Role-based workflows",
       "Data-quality controls",
-      "Reporting"
+      "Operational reporting"
     ],
     stack: ["JavaScript", "HTML/CSS", "PostgreSQL", "PL/pgSQL", "Supabase", "Vercel", "Leaflet"],
     github: "https://github.com/kaseypelchy-ops/fieldos-project-showcase",
     accent: "cyan",
     flywheel: {
       kicker: "Field learning loop",
-      title: "FieldOS / Door-to-Door",
-      description: "Territory data drives field execution, captured outcomes flow through the installation lifecycle, and performance evidence continuously sharpens targeting.",
+      title: "Field Operations + Fulfillment",
+      description: "Work-area data drives field execution, captured outcomes move through follow-up and fulfillment, and performance evidence continuously sharpens the next assignment cycle.",
       steps: [
-        "Territory Data",
-        "Assign Sales Reps",
-        "Knock Doors",
+        "Work-Area Data",
+        "Assign Teams",
+        "Visit / Engage",
         "Capture Outcomes",
-        "Sale / Follow-Up",
-        "Installation Lifecycle",
+        "Follow-Up / Convert",
+        "Fulfillment",
         "Measure Performance",
         "Improve Targeting"
       ],
       forceMultipliers: [
-        "Address-centered workflow",
+        "Location-centered workflow",
         "Mobile field execution",
         "Realtime operational visibility",
-        "Shared installation capacity"
+        "Shared appointment capacity"
       ],
       goodFriction: [
-        "Transactional sale completion",
+        "Transactional completion",
         "Capacity validation before scheduling",
-        "Pricing snapshots preserve quoted offers",
+        "Configuration snapshots preserve history",
         "Reconciliation fallback protects field data"
       ]
     }
@@ -158,14 +180,23 @@ export const projects: Project[] = [
   {
     slug: "ai-call-quality",
     number: "03",
-    title: "AI Call Quality & Coaching",
-    eyebrow: "AI · Cloud Architecture · Workflow Automation",
-    shortDescription: "An AI-assisted QA and coaching platform that turns completed customer-service calls into structured evaluations, follow-up workflows, and management analytics.",
-    summary: "Completed calls move through an asynchronous processing pipeline that validates eligibility, prevents duplicate analysis, performs structured AI evaluation, applies deterministic application scoring, persists results, and routes outcomes into coaching and management workflows.",
+    title: "AI Quality Assurance & Coaching Platform",
+    implementationName: "AI Call Quality & Coaching",
+    eyebrow: "AI · Quality Operations · Workflow Automation",
+    shortDescription: "An AI-assisted quality system that turns customer or sales interactions into structured evaluations, coaching workflows, and management intelligence.",
+    summary: "This system pattern uses AI as one stage inside a controlled operational workflow rather than treating model output as the final answer. Interactions are validated, analyzed into structured evidence, scored deterministically, persisted, and routed into coaching and management workflows. The pattern applies to any organization that needs to review more interactions without giving up consistency or auditability.",
+    systemPattern: "Turn high-volume interactions into structured quality evidence and closed-loop coaching.",
+    applications: ["Contact centers", "Inside sales", "Customer success", "Insurance", "Healthcare scheduling", "Financial services"],
+    businessValue: [
+      "Increase QA coverage without requiring managers to manually review every interaction.",
+      "Create more consistent evaluations by combining structured AI analysis with deterministic scoring rules.",
+      "Move from a QA score to a documented coaching action and follow-up workflow.",
+      "Track processing health, exclusions, retries, notifications, and coaching effectiveness over time."
+    ],
     businessProblem: [
-      "Manual call review limited coverage, consistency, and coaching speed.",
-      "AI output needed deterministic validation before becoming an official QA result.",
-      "Processing, notifications, coaching, and analytics needed independent failure boundaries."
+      "Manual quality review limits coverage, consistency, and the speed of useful coaching.",
+      "AI output cannot safely become official system state without structure, validation, and deterministic business rules.",
+      "Analysis, notifications, coaching, and analytics need independent failure boundaries so one issue does not break the entire process."
     ],
     engineeringView: [
       "Separate intake, queueing, analysis, persistence, notification, and coaching.",
@@ -193,23 +224,23 @@ export const projects: Project[] = [
     accent: "violet",
     flywheel: {
       kicker: "Coaching feedback loop",
-      title: "Customer Service AI Coaching",
-      description: "Every customer interaction becomes structured QA evidence that informs coaching, changes behavior, improves experience, and creates better data for the next evaluation cycle.",
+      title: "Interaction Quality + Coaching",
+      description: "Every interaction becomes structured QA evidence that informs coaching, changes behavior, improves the customer experience, and creates better data for the next evaluation cycle.",
       steps: [
         "Customer Interaction",
-        "Conversation Analysis",
-        "QA Scoring",
+        "Interaction Analysis",
+        "Quality Evaluation",
         "Identify Strengths + Gaps",
         "Coaching",
         "Behavior Change",
         "Improved Experience",
-        "New QA Data"
+        "New Quality Data"
       ],
       forceMultipliers: [
-        "Automated call ingestion",
+        "Automated interaction ingestion",
         "Structured AI evaluation",
         "Automated coaching workflows",
-        "New QA data feeds the next cycle"
+        "New evidence feeds the next cycle"
       ],
       goodFriction: [
         "Eligibility checks before analysis",
@@ -222,14 +253,23 @@ export const projects: Project[] = [
   {
     slug: "fiber-mapping",
     number: "04",
-    title: "Fiber Service Area Mapping",
-    eyebrow: "Python · Geospatial · Data Engineering",
-    shortDescription: "A geospatial pipeline that converts KML/KMZ service-area boundaries into normalized broadband-location datasets.",
-    summary: "The pipeline parses and repairs geometry, uses a bounding-box query to reduce a large broadband-location dataset to a candidate set, performs exact point-in-polygon matching, normalizes matched locations, and exports structured downstream files.",
+    title: "Location Intelligence & Geospatial Data Platform",
+    implementationName: "Fiber Service Area Mapping",
+    eyebrow: "Geospatial · Data Engineering · Automation",
+    shortDescription: "A geospatial processing pattern that converts service, delivery, or operating boundaries into normalized location-level data that downstream teams can actually use.",
+    summary: "This system pattern bridges the gap between geographic boundaries and operational records. It parses and repairs geometry, reduces a large reference dataset to a practical candidate set, performs exact spatial matching, normalizes matched locations, and exports structured downstream data. The original implementation used service-area boundaries, but the same approach applies to territories, delivery zones, assets, properties, risk areas, and expansion planning.",
+    systemPattern: "Convert geographic boundaries into clean, actionable location-level records at scale.",
+    applications: ["Utilities", "Logistics & delivery", "Real estate", "Territory planning", "Franchise expansion", "Infrastructure operations"],
+    businessValue: [
+      "Translate shapes on a map into specific locations that sales, operations, marketing, or planning teams can use.",
+      "Reduce expensive spatial processing by filtering the candidate universe before exact matching.",
+      "Create repeatable, deduplicated datasets instead of one-off GIS exports.",
+      "Protect automated processing with lineage, locks, repeat-upload handling, and safe recovery."
+    ],
     businessProblem: [
-      "Service areas are geographic, while marketing and operations need address-level data.",
-      "Large reference datasets make brute-force spatial matching expensive.",
-      "Cloud processing needed duplicate protection, locks, lineage, and safe recovery."
+      "Businesses often define service, risk, delivery, ownership, or operating areas geographically while downstream workflows need location-level records.",
+      "Large reference datasets make brute-force spatial matching expensive and slow.",
+      "Automated cloud processing needs duplicate protection, locks, lineage, and safe recovery when the same source is processed again."
     ],
     engineeringView: [
       "Parse and repair source geometry before matching.",
@@ -256,18 +296,18 @@ export const projects: Project[] = [
     github: "https://github.com/kaseypelchy-ops/fiber-service-area-mapping-showcase",
     accent: "orange",
     flywheel: {
-      kicker: "Build-measure-improve loop",
-      title: "Software Development + Automation",
-      description: "The mapping pipeline follows the same operating loop used to build durable internal tools: investigate the workflow, design and deploy the solution, observe real use, then improve and automate the next cycle.",
+      kicker: "Spatial data loop",
+      title: "Boundaries + Location Intelligence",
+      description: "Geographic definitions become normalized operational records, downstream use exposes data gaps, and those observations improve the next processing cycle.",
       steps: [
-        "Operational Problem",
-        "Investigate Workflow",
-        "Design Solution",
-        "Build Tool",
-        "Deploy",
-        "User Adoption",
-        "Collect Operational Data",
-        "Improve + Automate"
+        "Operational Boundary",
+        "Normalize Geometry",
+        "Reduce Candidates",
+        "Exact Spatial Match",
+        "Normalize Records",
+        "Downstream Workflow",
+        "Measure Data Quality",
+        "Improve Pipeline"
       ],
       forceMultipliers: [
         "Automated geometry parsing",
@@ -286,14 +326,23 @@ export const projects: Project[] = [
   {
     slug: "seo-aeo",
     number: "05",
-    title: "SEO, AEO & Search Intelligence",
-    eyebrow: "Marketing Operations · Search Intelligence · Full Stack",
-    shortDescription: "A production search-operations platform connecting structured publishing, site health, organic performance, optimization workflows, and AI visibility.",
-    summary: "The platform began as a database-driven SEO/AEO content system and expanded into a protected search-intelligence application. It connects managed page data, rendered website state, Google Search Console performance, GA4 AI referrals, Bing AI citation evidence, automated monitoring, prioritization models, and closed-loop experiments.",
+    title: "Search & Digital Visibility Intelligence Platform",
+    implementationName: "SEO, AEO & Search Intelligence",
+    eyebrow: "Growth Intelligence · Search Operations · Full Stack",
+    shortDescription: "A search-operations platform connecting scalable publishing, technical site health, organic demand, optimization workflows, analytics, and emerging AI visibility.",
+    summary: "This system pattern gives a business one operational layer for publishing at scale, measuring search demand, diagnosing technical or content gaps, prioritizing work, verifying changes, and tracking visibility across both traditional search and emerging AI discovery. The original implementation supported a large localized content footprint, but the architecture applies to any organization managing many pages, locations, services, products, or search intents.",
+    systemPattern: "Connect publishing, search evidence, technical health, prioritization, and outcome measurement in one growth loop.",
+    applications: ["Multi-location brands", "Professional services", "SaaS", "Home services", "Healthcare networks", "Content-heavy businesses"],
+    businessValue: [
+      "Scale structured content without turning every page into a separate maintenance project.",
+      "Bring search performance, rendered-site health, analytics, and AI visibility into one operating view.",
+      "Prioritize the work most likely to matter instead of treating every finding as equally urgent.",
+      "Close the loop from recommendation to implementation, verification, and measured outcome."
+    ],
     businessProblem: [
-      "Hundreds of localized pages needed consistent content, metadata, hierarchy, internal links, and structured data without independent maintenance.",
-      "Search, rendered-site, analytics, and AI-visibility evidence lived in separate sources with different meanings.",
-      "Recommendations needed prioritization, operational ownership, verification, and later outcome measurement."
+      "Large sites need consistent content, metadata, hierarchy, internal links, and structured data without maintaining every page independently.",
+      "Search performance, rendered-site evidence, analytics, and AI-visibility signals live in different sources with different meanings.",
+      "Recommendations need prioritization, ownership, verification, and later outcome measurement rather than becoming another static audit."
     ],
     engineeringView: [
       "Model content and page ownership explicitly before measuring performance.",
@@ -305,7 +354,7 @@ export const projects: Project[] = [
     ],
     engineeringWork: [
       "Relational content modeling",
-      "Reusable WordPress publishing",
+      "Reusable publishing architecture",
       "Search Console integration",
       "Intent and ownership intelligence",
       "Opportunity prioritization",
@@ -313,8 +362,8 @@ export const projects: Project[] = [
       "Rendered-site health monitoring",
       "Internal-link execution and verification",
       "Optimization experiment tracking",
-      "GA4 AI-referral measurement",
-      "Bing AI citation intelligence",
+      "AI-referral measurement",
+      "AI citation intelligence",
       "Import lineage and pipeline operations",
       "Explainable scoring and guardrails"
     ],
@@ -322,9 +371,9 @@ export const projects: Project[] = [
     github: "https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase",
     accent: "rose",
     flywheel: {
-      kicker: "Search intelligence loop",
-      title: "SEO, AEO + Search Intelligence",
-      description: "Structured content creates a governed publishing foundation; search, site, referral, and citation evidence then guide action and measure the next improvement cycle.",
+      kicker: "Growth intelligence loop",
+      title: "Publishing + Search Intelligence",
+      description: "Structured publishing creates a governed foundation; search, site, referral, and citation evidence then guide action and measure the next improvement cycle.",
       steps: [
         "Structured Content",
         "Publish + Render",
@@ -336,7 +385,7 @@ export const projects: Project[] = [
         "Improve the Model"
       ],
       forceMultipliers: [
-        "435+ dynamic localized pages",
+        "Reusable publishing patterns",
         "Search + site evidence integration",
         "Explainable opportunity scoring",
         "Search + AI measurement feedback"

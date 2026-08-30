@@ -12,7 +12,7 @@ export function PerspectiveToggle({ business, engineering }: Props) {
     <section className="perspective-shell">
       <div className="perspective-head">
         <div>
-          <p className="eyebrow">Two ways to read the project</p>
+          <p className="eyebrow">Business first · engineering when useful</p>
           <h2>{mode === "business" ? "Business view" : "Engineering view"}</h2>
         </div>
         <div className="segmented" role="group" aria-label="Project perspective">

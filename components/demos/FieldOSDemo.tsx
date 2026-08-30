@@ -3,25 +3,25 @@
 import { useState } from "react";
 
 const steps = [
-  "Territory loaded",
-  "Address selected",
-  "Disposition recorded",
-  "Demo offer selected",
-  "Installation slot reserved",
-  "Synthetic sale submitted"
+  "Work area loaded",
+  "Location selected",
+  "Outcome recorded",
+  "Package selected",
+  "Appointment reserved",
+  "Transaction submitted"
 ];
 
 const locations = [
-  { pin: "A", address: "1840 Example Lane", detail: "Serviceable · Fiber ready", className: "pin-a" },
-  { pin: "B", address: "72 Sample Street", detail: "Serviceable · Follow-up", className: "pin-b" },
-  { pin: "C", address: "905 Demo Road", detail: "Serviceable · New lead", className: "pin-c" }
+  { pin: "A", address: "1840 Example Lane", detail: "Eligible · Ready for service", className: "pin-a" },
+  { pin: "B", address: "72 Sample Street", detail: "Eligible · Follow-up", className: "pin-b" },
+  { pin: "C", address: "905 Demo Road", detail: "Eligible · New opportunity", className: "pin-c" }
 ];
 
 const nextActions: Record<number, string> = {
-  2: "Record disposition",
-  3: "Select demo offer",
-  4: "Reserve installation slot",
-  5: "Submit synthetic sale"
+  2: "Record outcome",
+  3: "Select demo package",
+  4: "Reserve appointment",
+  5: "Submit transaction"
 };
 
 export function FieldOSDemo() {
@@ -30,11 +30,11 @@ export function FieldOSDemo() {
   const location = locations[selectedLocation];
   const workflowComplete = completedSteps >= steps.length;
   const mapEvents = [
-    { eyebrow: "Location opened", title: location.address, label: "Serviceability", value: location.detail, status: "Ready for disposition" },
-    { eyebrow: "Outcome saved", title: "Some interest", label: "Follow-up", value: "Customer requested offer details", status: "Synced to territory" },
-    { eyebrow: "Offer selected", title: "Fiber Gig", label: "Demo pricing", value: "Approved offer snapshot saved", status: "Ready to schedule" },
-    { eyebrow: "Capacity reserved", title: "Tuesday · 10:00 AM", label: "Install window", value: "Shared slot held for this location", status: "Slot confirmed" },
-    { eyebrow: "Sale submitted", title: "Workflow complete", label: "Next action", value: "Confirmation and review queued", status: "Synced successfully" }
+    { eyebrow: "Location opened", title: location.address, label: "Eligibility", value: location.detail, status: "Ready for outcome" },
+    { eyebrow: "Outcome saved", title: "Interested", label: "Follow-up", value: "Customer requested package details", status: "Synced to work area" },
+    { eyebrow: "Package selected", title: "Premium Plan", label: "Demo configuration", value: "Approved selection snapshot saved", status: "Ready to schedule" },
+    { eyebrow: "Capacity reserved", title: "Tuesday · 10:00 AM", label: "Appointment window", value: "Shared slot held for this location", status: "Slot confirmed" },
+    { eyebrow: "Transaction submitted", title: "Workflow complete", label: "Next action", value: "Confirmation and review queued", status: "Synced successfully" }
   ];
   const mapEvent = mapEvents[Math.min(completedSteps - 2, mapEvents.length - 1)];
 
@@ -48,13 +48,13 @@ export function FieldOSDemo() {
       <div className="demo-toolbar">
         <div>
           <p className="eyebrow">Synthetic interactive demo</p>
-          <h3>Field sales workflow</h3>
+          <h3>Distributed field workflow</h3>
         </div>
         <span className="demo-badge">Offline-safe concept</span>
       </div>
 
       <div className="fieldos-layout">
-        <div className="fake-map" aria-label="Synthetic territory map">
+        <div className="fake-map" aria-label="Synthetic work-area map">
           <div className="map-grid" />
           <div className="map-area area-a" />
           <div className="map-area area-b" />
@@ -86,11 +86,11 @@ export function FieldOSDemo() {
             </div>
             <div className="map-popup-status"><b />{mapEvent.status}</div>
           </aside>
-          <span className="map-label">Demo Territory 07 · 3 fictional locations</span>
+          <span className="map-label">Demo Work Area 07 · 3 fictional locations</span>
         </div>
         <div className="field-panel">
           <div className="field-address">
-            <span>Selected service location</span>
+            <span>Selected operational location</span>
             <strong>{location.address}</strong>
             <small>{location.detail}</small>
           </div>
@@ -118,7 +118,7 @@ export function FieldOSDemo() {
             )}
           </div>
           {workflowComplete && (
-            <p className="demo-note">The demo simulates the user flow only. Production pricing, customer data, scheduling rules, and integrations are intentionally excluded.</p>
+            <p className="demo-note">The demo illustrates a reusable field-to-operations workflow. Production customer data, business rules, capacity rules, pricing, and integrations are intentionally excluded.</p>
           )}
         </div>
       </div>

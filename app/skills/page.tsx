@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Skills & Certifications",
-  description: "A concise view of Kasey Pelchy's capabilities across software, data, automation, AI, marketing technology, RevOps, and operational systems."
+  description: "A concise view of Kasey Pelchy's capabilities across operational software, data, automation, AI, growth systems, RevOps, and technical delivery."
 };
 
 const skillGroups = [
@@ -14,7 +14,7 @@ const skillGroups = [
   },
   {
     number: "02",
-    title: "Data & Analytics",
+    title: "Data & Decision Intelligence",
     skills: ["PostgreSQL", "SQL", "Supabase", "BigQuery", "Data modeling", "ETL and normalization", "Scoring systems", "Operational reporting"]
   },
   {
@@ -24,13 +24,13 @@ const skillGroups = [
   },
   {
     number: "04",
-    title: "Marketing Technology",
+    title: "Growth & Marketing Technology",
     skills: ["SEO", "AEO", "GA4", "WordPress", "ACF", "Audience segmentation", "Lifecycle campaigns", "Content systems"]
   },
   {
     number: "05",
     title: "Revenue & Operations",
-    skills: ["Revenue operations", "Sales workflows", "Field-sales operations", "Lifecycle design", "Capacity planning", "Process mapping", "Customer acquisition", "Decision support"]
+    skills: ["Revenue operations", "Sales workflows", "Field operations", "Lifecycle design", "Capacity planning", "Process mapping", "Customer acquisition", "Decision support"]
   },
   {
     number: "06",
@@ -40,11 +40,11 @@ const skillGroups = [
 ];
 
 const evidence = [
-  { capability: "Transactional workflows and PostgreSQL", project: "FieldOS", href: "/projects/fieldos" },
-  { capability: "Data modeling, scoring, and decision support", project: "Market Recovery Intelligence", href: "/projects/market-recovery" },
-  { capability: "AI processing and coaching automation", project: "AI Call Quality & Coaching", href: "/projects/ai-call-quality" },
-  { capability: "Python and geospatial data processing", project: "Fiber Service Area Mapping", href: "/projects/fiber-mapping" },
-  { capability: "SEO, AEO, and content architecture", project: "SEO & AEO Content Platform", href: "/projects/seo-aeo" }
+  { capability: "Distributed operational workflows and shared capacity", project: "Field Operations & Sales Management Platform", href: "/projects/fieldos" },
+  { capability: "Data modeling, scoring, prioritization, and measurement", project: "Market Performance Intelligence System", href: "/projects/market-recovery" },
+  { capability: "AI evaluation, automation, and closed-loop coaching", project: "AI Quality Assurance & Coaching Platform", href: "/projects/ai-call-quality" },
+  { capability: "Python and scalable geospatial processing", project: "Location Intelligence & Geospatial Data Platform", href: "/projects/fiber-mapping" },
+  { capability: "Search operations, publishing architecture, and AI visibility", project: "Search & Digital Visibility Intelligence Platform", href: "/projects/seo-aeo" }
 ];
 
 const certifications = [
@@ -70,8 +70,8 @@ export default function SkillsPage() {
       <div className="container">
         <div className="page-intro">
           <p className="eyebrow">Skills & Certifications</p>
-          <h1>Capabilities backed by working systems.</h1>
-          <p>My strongest work happens where business context, process design, data, and technical execution meet. This page is a concise index; the project case studies show how the capabilities are applied.</p>
+          <h1>Capabilities backed by systems that solve real business problems.</h1>
+          <p>My strongest work sits where business process, data, software, automation, and growth operations overlap. The case studies are intentionally framed as reusable patterns so the capability is easier to translate across industries.</p>
         </div>
 
         <div className="skills-grid">
@@ -91,8 +91,8 @@ export default function SkillsPage() {
         <section className="skills-evidence">
           <div className="section-heading">
             <p className="eyebrow">Evidence in the portfolio</p>
-            <h2>Skills connected to projects.</h2>
-            <p>Each capability below links to a public-safe case study that demonstrates the architecture, workflow, and problem-solving behind it.</p>
+            <h2>Skills connected to reusable system patterns.</h2>
+            <p>Each capability below links to a public-safe case study that starts with the business value and then exposes the architecture and engineering depth behind it.</p>
           </div>
           <div className="evidence-list">
             {evidence.map((item, index) => (
@@ -100,7 +100,7 @@ export default function SkillsPage() {
                 <span>0{index + 1}</span>
                 <strong>{item.capability}</strong>
                 <p>{item.project}</p>
-                <i>View project →</i>
+                <i>View system →</i>
               </Link>
             ))}
           </div>

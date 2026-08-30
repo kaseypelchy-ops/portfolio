@@ -6,10 +6,10 @@ import { TartanInteraction } from "@/components/TartanInteraction";
 
 export const metadata: Metadata = {
   title: {
-    default: "Kasey Pelchy — Systems, Data & Marketing Technology",
+    default: "Kasey Pelchy — Business Systems, Data & Automation",
     template: "%s | Kasey Pelchy"
   },
-  description: "Portfolio of Kasey Pelchy: marketing technology, full-stack systems, data engineering, automation, AI, analytics, and operations.",
+  description: "Portfolio of reusable business-system patterns across operational software, decision intelligence, data, automation, AI, growth technology, and revenue operations.",
   icons: { icon: "/favicon.svg" }
 };
 

@@ -43,7 +43,7 @@ function slugify(value: string) {
 
 export function SeoDemo() {
   const [market, setMarket] = useState<keyof typeof marketEvidence>("Northfield");
-  const [service, setService] = useState("Fiber Internet");
+  const [service, setService] = useState("Managed IT Services");
   const [view, setView] = useState<DemoView>("publishing");
 
   const evidence = marketEvidence[market];
@@ -51,13 +51,13 @@ export function SeoDemo() {
   const query = `${service.toLowerCase()} in ${market.toLowerCase()}`;
 
   const bundle = {
-    title: `${service} in ${market} | Example Broadband`,
-    description: `Explore ${service.toLowerCase()} options in ${market}, including availability, service details, and frequently asked questions.`,
+    title: `${service} in ${market} | Example Company`,
+    description: `Explore ${service.toLowerCase()} options in ${market}, including service details, availability, and frequently asked questions.`,
     canonical: `https://example.com/${slugify(market)}/${slugify(service)}`,
-    answerEngineSummary: `${service} is available to qualifying addresses in ${market}. Address-level availability must be confirmed before ordering.`,
+    answerEngineSummary: `${service} is offered in ${market}. Exact availability, scope, or eligibility should be confirmed before purchase.`,
     faq: [
       `Is ${service.toLowerCase()} available in ${market}?`,
-      "How do I check serviceability at my address?",
+      "How do I confirm availability for my location?",
     ],
   };
 
@@ -98,17 +98,12 @@ export function SeoDemo() {
       <div className="demo-toolbar">
         <div>
           <p className="eyebrow">Synthetic interactive demo</p>
-          <h3>Search operations command center</h3>
+          <h3>Digital visibility command center</h3>
         </div>
         <div className="inline-controls">
           <label>
             Market
-            <select
-              value={market}
-              onChange={(event) =>
-                setMarket(event.target.value as keyof typeof marketEvidence)
-              }
-            >
+            <select value={market} onChange={(event) => setMarket(event.target.value as keyof typeof marketEvidence)}>
               <option>Northfield</option>
               <option>Lakeview</option>
               <option>Redwood Hills</option>
@@ -116,13 +111,10 @@ export function SeoDemo() {
           </label>
           <label>
             Service
-            <select
-              value={service}
-              onChange={(event) => setService(event.target.value)}
-            >
-              <option>Fiber Internet</option>
-              <option>Business Internet</option>
-              <option>Managed Wi-Fi</option>
+            <select value={service} onChange={(event) => setService(event.target.value)}>
+              <option>Managed IT Services</option>
+              <option>Commercial Services</option>
+              <option>Home Services</option>
             </select>
           </label>
         </div>
@@ -138,13 +130,7 @@ export function SeoDemo() {
             ["json", "Evidence JSON"],
           ] as const
         ).map(([value, label]) => (
-          <button
-            type="button"
-            className={view === value ? "active" : ""}
-            aria-pressed={view === value}
-            onClick={() => setView(value)}
-            key={value}
-          >
+          <button type="button" className={view === value ? "active" : ""} aria-pressed={view === value} onClick={() => setView(value)} key={value}>
             {label}
           </button>
         ))}
@@ -156,9 +142,7 @@ export function SeoDemo() {
           <h4>{bundle.title}</h4>
           <p>{bundle.description}</p>
           <div className="faq-preview">
-            {bundle.faq.map((item) => (
-              <div key={item}>+ {item}</div>
-            ))}
+            {bundle.faq.map((item) => <div key={item}>+ {item}</div>)}
           </div>
         </div>
       ) : null}
@@ -205,7 +189,7 @@ export function SeoDemo() {
         <div>
           <div className="metric-grid">
             <div className="metric"><span>Identifiable AI referrals</span><strong>{evidence.aiSessions}</strong></div>
-            <div className="metric"><span>Bing AI citations</span><strong>{evidence.citations}</strong></div>
+            <div className="metric"><span>AI citation evidence</span><strong>{evidence.citations}</strong></div>
             <div className="metric"><span>Cited pages</span><strong>{evidence.citedPages}</strong></div>
             <div className="metric"><span>Measurement coverage</span><strong>Measured</strong></div>
           </div>

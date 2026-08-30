@@ -17,18 +17,12 @@ export function AIQualityDemo() {
   const [index, setIndex] = useState(-1);
 
   useEffect(() => {
-    if (!running || index >= pipeline.length - 1) {
-      return;
-    }
+    if (!running || index >= pipeline.length - 1) return;
 
     const timer = window.setTimeout(() => {
       const nextIndex = index + 1;
-
       setIndex(nextIndex);
-
-      if (nextIndex >= pipeline.length - 1) {
-        setRunning(false);
-      }
+      if (nextIndex >= pipeline.length - 1) setRunning(false);
     }, 550);
 
     return () => window.clearTimeout(timer);
@@ -46,27 +40,18 @@ export function AIQualityDemo() {
       <div className="demo-toolbar">
         <div>
           <p className="eyebrow">Synthetic interactive demo</p>
-          <h3>Call analysis pipeline</h3>
+          <h3>Interaction quality pipeline</h3>
         </div>
 
-        <button
-          type="button"
-          onClick={startAnalysis}
-          disabled={running}
-        >
-          {running ? "Processing…" : "Analyze sample call"}
+        <button type="button" onClick={startAnalysis} disabled={running}>
+          {running ? "Processing…" : "Analyze sample interaction"}
         </button>
       </div>
 
       <div className="pipeline-list">
         {pipeline.map((label, i) => (
-          <div
-            className={`pipeline-step ${i <= index ? "done" : ""}`}
-            key={label}
-          >
-            <span>
-              {i <= index ? "✓" : String(i + 1).padStart(2, "0")}
-            </span>
+          <div className={`pipeline-step ${i <= index ? "done" : ""}`} key={label}>
+            <span>{i <= index ? "✓" : String(i + 1).padStart(2, "0")}</span>
             <p>{label}</p>
           </div>
         ))}
@@ -75,13 +60,13 @@ export function AIQualityDemo() {
       {complete && (
         <div className="qa-result">
           <div>
-            <span>Synthetic QA score</span>
+            <span>Synthetic quality score</span>
             <strong>91</strong>
           </div>
 
           <div>
             <span>Coaching focus</span>
-            <strong>Clarify resolution summary</strong>
+            <strong>Clarify the resolution summary</strong>
             <p>Generated from a fictional structured evaluation.</p>
           </div>
         </div>

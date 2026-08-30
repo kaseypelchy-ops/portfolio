@@ -9,7 +9,7 @@ export function SiteHeader() {
           KP<span className="brand-dot">.</span>
         </Link>
         <nav className="nav-links" aria-label="Primary navigation">
-          <Link href="/projects">Projects</Link>
+          <Link href="/projects">Systems</Link>
           <Link href="/about">About</Link>
           <Link href="/experience">Experience</Link>
           <Link href="/skills">Skills</Link>

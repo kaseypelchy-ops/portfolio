@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <div className="footer-mark">KASEY PELCHY</div>
-          <p>Marketing technology, software engineering, data, automation, AI, and operations.</p>
+          <p>Business systems, operational software, data, automation, AI, growth technology, and revenue operations.</p>
         </div>
         <div className="footer-links">
           <Link href="/cwlwm-systems" className="footer-cwlwm-link">

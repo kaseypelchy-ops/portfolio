@@ -1,50 +1,54 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Cwlwm Systems",
-  description: "Cwlwm Systems builds practical software, data, automation, AI, and marketing-operations systems that connect fragmented work."
+  description: "Cwlwm Systems designs custom operational software that connects people, processes, data, automation, AI, and existing business tools."
 };
 
 const services = [
   {
     number: "01",
-    title: "Operational Software",
-    description: "Purpose-built internal tools, workflow applications, dashboards, and interfaces designed around how the work actually happens.",
-    items: ["Internal applications", "Workflow design", "Role-based tools", "System integrations"]
+    title: "Operational Platforms",
+    description: "Purpose-built software for workflows that have outgrown spreadsheets, forms, inboxes, or a patchwork of SaaS tools.",
+    items: ["Internal applications", "Field operations", "Workflow design", "Role-based tools", "System integrations"]
   },
   {
     number: "02",
-    title: "Data & Decision Systems",
-    description: "Structured data models, pipelines, scoring logic, reporting, and analytical layers that turn scattered records into usable evidence.",
-    items: ["Data modeling", "PostgreSQL and SQL", "Operational analytics", "Scoring and prioritization"]
+    title: "Data & Decision Intelligence",
+    description: "Systems that organize fragmented operational data and turn it into prioritization, measurement, reporting, and clearer decisions.",
+    items: ["Data modeling", "Operational analytics", "Scoring", "Prioritization", "Measurement baselines"]
   },
   {
     number: "03",
     title: "Automation & AI",
-    description: "Reliable automations and AI-assisted workflows with validation, retries, monitoring, and clear human decision points.",
-    items: ["Process automation", "LLM workflows", "Notifications", "Asynchronous processing"]
+    description: "Reliable automations and AI-assisted workflows built with validation, retries, monitoring, structured outputs, and clear human control points.",
+    items: ["Process automation", "LLM workflows", "Notifications", "Async processing", "Quality controls"]
   },
   {
     number: "04",
-    title: "Marketing & Revenue Operations",
-    description: "Connected acquisition, content, sales, lifecycle, and measurement systems that reduce handoff friction and improve visibility.",
-    items: ["Marketing technology", "Revenue operations", "SEO and AEO systems", "Lifecycle workflows"]
+    title: "Growth & Revenue Systems",
+    description: "Connected systems across acquisition, search, content, sales, customer lifecycle, attribution, and revenue operations.",
+    items: ["Search intelligence", "RevOps", "Lifecycle workflows", "Marketing technology", "Measurement"]
   }
 ];
 
 const process = [
-  { number: "01", title: "Understand", copy: "Clarify the problem, users, decisions, constraints, and current points of friction." },
-  { number: "02", title: "Map", copy: "Define the workflow, source of truth, data relationships, and failure boundaries." },
-  { number: "03", title: "Build", copy: "Create the smallest reliable system that materially improves the work." },
-  { number: "04", title: "Validate", copy: "Test the system against real use, edge cases, changing inputs, and measurable outcomes." }
+  { number: "01", title: "Understand", copy: "Clarify the business problem, users, decisions, constraints, and where work currently breaks." },
+  { number: "02", title: "Map", copy: "Define the workflow, source of truth, data relationships, handoffs, and failure boundaries." },
+  { number: "03", title: "Build", copy: "Create the smallest reliable system that materially improves the real work." },
+  { number: "04", title: "Validate", copy: "Test against real use, edge cases, changing inputs, adoption, and measurable business outcomes." }
 ];
 
-const proof = [
-  { title: "FieldOS", description: "Address-centered field-sales operations and installation-capacity workflows.", href: "/projects/fieldos" },
-  { title: "Market Recovery Intelligence", description: "Market scoring, prioritization, investigation, and outcome measurement.", href: "/projects/market-recovery" },
-  { title: "AI Call Quality & Coaching", description: "Structured AI evaluation connected to coaching and management workflows.", href: "/projects/ai-call-quality" }
+const problemPatterns = [
+  "Important work depends on spreadsheets, inboxes, forms, or repeated manual entry.",
+  "Teams already have software, but the handoffs between tools are where work breaks.",
+  "Leadership has reports but not a trustworthy operational view of what is happening now.",
+  "An off-the-shelf product handles 80% of the workflow but the missing 20% creates most of the friction.",
+  "The business has enough data to make better decisions, but it is scattered across systems or difficult to interpret.",
+  "AI or automation could help, but the process needs controls, validation, and integration before it can be trusted."
 ];
 
 export default function CwlwmSystemsPage() {
@@ -54,11 +58,11 @@ export default function CwlwmSystemsPage() {
         <div className="container cwlwm-hero-grid">
           <div>
             <p className="eyebrow">Independent systems studio · Pennsylvania</p>
-            <h1>Connect the work. <span>Remove the friction.</span></h1>
-            <p className="cwlwm-lede">Cwlwm Systems designs and builds practical software, data, automation, AI, and marketing-operations systems for organizations whose work has outgrown spreadsheets, manual handoffs, or disconnected tools.</p>
+            <h1>We build the systems <span>between the systems.</span></h1>
+            <p className="cwlwm-lede">Cwlwm Systems designs custom operational software that connects your people, processes, data, and existing tools — replacing fragmented workflows with systems built around how your business actually operates.</p>
             <div className="hero-actions">
               <a className="button primary" href="mailto:cwlwmsystems@gmail.com?subject=Cwlwm%20Systems%20project%20inquiry">Start a conversation</a>
-              <Link className="button secondary" href="/projects">See working examples</Link>
+              <Link className="button secondary" href="/projects">See system patterns</Link>
             </div>
           </div>
 
@@ -80,8 +84,8 @@ export default function CwlwmSystemsPage() {
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">What Cwlwm Systems builds</p>
-            <h2>Practical systems around real operations.</h2>
-            <p>The goal is not more technology. It is a clearer workflow, trustworthy information, less repetitive work, and a system people can actually use.</p>
+            <h2>Custom operating systems for the parts of the business that do not fit neatly into one tool.</h2>
+            <p>The goal is not more technology. It is fewer handoff failures, less repetitive work, clearer ownership, trustworthy information, and a system people can actually use.</p>
           </div>
           <div className="cwlwm-service-grid">
             {services.map((service) => (
@@ -100,13 +104,11 @@ export default function CwlwmSystemsPage() {
         <div className="container cwlwm-fit-grid">
           <div className="section-heading">
             <p className="eyebrow">A good fit when</p>
-            <h2>The process works—but the pieces do not.</h2>
+            <h2>The business works, but the workflow between the pieces does not.</h2>
+            <p>Cwlwm is most useful when the problem crosses teams, software, data, and business rules rather than fitting inside a single feature request.</p>
           </div>
           <div className="cwlwm-fit-list">
-            <div><span>01</span><p>Important work depends on spreadsheets, inboxes, or repeated manual entry.</p></div>
-            <div><span>02</span><p>Teams use multiple tools, but information and ownership break between them.</p></div>
-            <div><span>03</span><p>Leadership needs trustworthy operational visibility rather than another static report.</p></div>
-            <div><span>04</span><p>An off-the-shelf product almost fits, but cannot support the real workflow.</p></div>
+            {problemPatterns.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></div>)}
           </div>
         </div>
       </section>
@@ -128,12 +130,21 @@ export default function CwlwmSystemsPage() {
       <section className="page-section cwlwm-proof-section">
         <div className="container">
           <div className="section-heading split">
-            <div><p className="eyebrow">Evidence of the approach</p><h2>Selected public-safe case studies.</h2></div>
-            <Link href="/projects" className="text-link">View all projects →</Link>
+            <div>
+              <p className="eyebrow">Reusable systems, proven in real operations</p>
+              <h2>See the pattern first. Then see the implementation.</h2>
+            </div>
+            <Link href="/projects" className="text-link">View all systems →</Link>
           </div>
-          <div className="cwlwm-proof-grid">
-            {proof.map((item) => (
-              <Link href={item.href} key={item.title}><span>Case study</span><h3>{item.title}</h3><p>{item.description}</p><b>Explore project →</b></Link>
+          <div className="cwlwm-proof-grid cwlwm-proof-grid-all">
+            {projects.map((project) => (
+              <Link href={`/projects/${project.slug}`} key={project.slug}>
+                <span>System pattern</span>
+                <h3>{project.title}</h3>
+                <p>{project.systemPattern}</p>
+                <small>Built example: {project.implementationName}</small>
+                <b>Explore case study →</b>
+              </Link>
             ))}
           </div>
         </div>
@@ -146,7 +157,7 @@ export default function CwlwmSystemsPage() {
               <Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" />
               <p className="eyebrow">Cwlwm Systems</p>
             </div>
-            <h2>Have a process that needs a better system?</h2>
+            <h2>Have a process that needs a better system around it?</h2>
           </div>
           <a className="button primary" href="mailto:cwlwmsystems@gmail.com?subject=Cwlwm%20Systems%20project%20inquiry">cwlwmsystems@gmail.com ↗</a>
         </div>

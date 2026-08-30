@@ -13,8 +13,8 @@ export default function ContactPage() {
         <div className="contact-grid">
           <div>
             <p className="eyebrow">Contact</p>
-            <h1>Interested in the systems behind the work?</h1>
-            <p>The public portfolio is intentionally sanitized, but the case studies show the architecture, engineering patterns, and problem-solving approach behind the projects.</p>
+            <h1>See a system pattern that could fit your business?</h1>
+            <p>The case studies are intentionally generalized so you can evaluate the business pattern first, then go deeper into the technical implementation. For custom operational software, automation, AI, data, or growth systems, Cwlwm Systems is the business-facing path.</p>
           </div>
           <div className="contact-links">
             <a href="mailto:cwlwmsystems@gmail.com"><span>Email</span><strong>cwlwmsystems@gmail.com ↗</strong></a>
