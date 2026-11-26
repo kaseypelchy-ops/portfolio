@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 const lanes = [
   { title: "Business & Operations", items: ["Process design", "Customer acquisition", "Field operations", "Campaign execution", "Cross-functional workflow design", "Reporting and decision support"] },
   { title: "Software & Systems", items: ["Full-stack internal applications", "Transactional workflows", "Role-based operational tools", "Realtime and offline-safe patterns", "API integration", "Deployment and regression validation"] },
+  { title: "HubSpot & Revenue Operations", items: ["Guided HubSpot onboarding", "CRM properties, associations and pipelines", "Sales-process mapping", "Workflow configuration and troubleshooting", "Data import mapping", "Cross-system integrations"] },
   { title: "Data, Automation & Growth", items: ["PostgreSQL / Supabase", "Data modeling", "ETL and normalization", "Scoring and ranking systems", "Geospatial processing", "AI-assisted workflows", "Search and lifecycle systems"] }
 ];
 

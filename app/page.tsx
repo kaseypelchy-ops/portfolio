@@ -8,9 +8,9 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Systems thinking · Software · Data · Automation · AI · Growth</p>
+            <p className="eyebrow">Business Systems · HubSpot · RevOps · Software · Data · Automation</p>
             <h1>I turn messy business workflows into <span>clear, usable systems.</span></h1>
-            <p className="hero-lede">I design and build operational platforms that connect people, process, data, and existing software. The portfolio is organized around reusable business patterns so the work is understandable beyond the industry where each system was first built.</p>
+            <p className="hero-lede">I work in HubSpot support and Revenue Operations at protocol80, building on an established background in business software, marketing operations, data, and integrations. I translate process problems into practical CRM configuration, automation, and custom systems.</p>
             <div className="hero-actions">
               <Link className="button primary" href="/projects">Explore system patterns</Link>
               <a className="button secondary" href="https://cwlwmsystems.vercel.app" target="_blank" rel="noreferrer">Visit Cwlwm Systems ↗</a>
@@ -54,6 +54,22 @@ export default function HomePage() {
           </div>
           <div className="project-grid">
             {projects.slice(0, 4).map((project) => <ProjectCard key={project.slug} project={project} />)}
+          </div>
+        </div>
+      </section>
+
+      <section className="projects-section">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">Recent work</p>
+            <h2>CRM implementation and business applications.</h2>
+            <p>Alongside the engineering case studies, my newer work includes HubSpot onboarding and configuration, cross-system automation, and independent client-facing websites and applications.</p>
+          </div>
+          <div className="capability-grid">
+            <article><span>01</span><h3>HubSpot &amp; RevOps delivery</h3><p>Guided onboarding, sales-process mapping, CRM properties and pipelines, record layouts, workflow troubleshooting, migration planning, and integration support. Client configurations are not published.</p></article>
+            <article><span>02</span><h3>Automotive storefront &amp; inventory</h3><p>Next.js storefront architecture with vehicle-fitment data, SKU and supplier records, database migrations, CSV imports, and a protected staff workspace. <a href="https://github.com/kaseypelchy-ops/olson-tenglund" target="_blank" rel="noreferrer">View repository ↗</a></p></article>
+            <article><span>03</span><h3>Regional business website</h3><p>A responsive informational site for Olson &amp; Tenglund across three Pennsylvania store locations, supported by local-search and business-presence work. <a href="https://github.com/kaseypelchy-ops/olson-tenglund-info" target="_blank" rel="noreferrer">View repository ↗</a></p></article>
+            <article><span>04</span><h3>Independent client projects</h3><p>Web and operational systems through Cwlwm Systems, including community-oriented work and an active church-website codebase. <a href="https://github.com/kaseypelchy-ops/church-website" target="_blank" rel="noreferrer">Church repo ↗</a></p></article>
           </div>
         </div>
       </section>

@@ -14,3 +14,10 @@ The goal is to make the work understandable to employers and prospective Cwlwm S
 ## Cwlwm Systems
 
 Cwlwm Systems is the independent company behind the business-facing services. Portfolio links point to the live company website at https://cwlwmsystems.vercel.app.
+
+
+## Current portfolio coverage (November 2026)
+
+The site includes five detailed public-safe engineering showcases and a separate section for newer work in HubSpot/RevOps delivery, Olson & Tenglund's operational storefront and informational website, and independent projects. HubSpot client data and proprietary configuration are intentionally excluded. A public code repository does not imply that every planned feature is live in production.
+
+The homepage, Projects, Experience, Skills, and metadata should be reviewed together when updating the professional positioning.

@@ -30,12 +30,12 @@ const skillGroups = [
   {
     number: "05",
     title: "Revenue & Operations",
-    skills: ["Revenue operations", "Sales workflows", "Field operations", "Lifecycle design", "Capacity planning", "Process mapping", "Customer acquisition", "Decision support"]
+    skills: ["HubSpot onboarding", "CRM properties & pipelines", "Workflow configuration", "Revenue operations", "Sales handoffs", "Data mapping & imports", "Integration troubleshooting", "Process mapping"]
   },
   {
     number: "06",
     title: "Platforms & Delivery",
-    skills: ["Vercel", "Google Cloud", "GitHub", "GitHub Actions", "Supabase", "Mautic", "HubSpot", "Deployment validation"]
+    skills: ["Vercel", "Google Cloud", "GitHub", "GitHub Actions", "Supabase", "Mautic", "Klaviyo", "HubSpot", "Deployment validation"]
   }
 ];
 
