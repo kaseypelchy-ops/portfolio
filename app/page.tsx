@@ -10,7 +10,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <p className="eyebrow">Business Systems · HubSpot · RevOps · Software · Data · Automation</p>
             <h1>I turn messy business workflows into <span>clear, usable systems.</span></h1>
-            <p className="hero-lede">I work in HubSpot support and Revenue Operations at protocol80, building on an established background in business software, marketing operations, data, and integrations. I translate process problems into practical CRM configuration, automation, and custom systems.</p>
+            <p className="hero-lede">I work in HubSpot support and Revenue Operations at protocol80, building on an established background in business software, marketing operations, data, and integrations. I translate process problems into practical CRM configuration, automation, and custom systems. I also run Cwlwm Systems, building websites and software for local businesses and community organizations.</p>
             <div className="hero-actions">
               <Link className="button primary" href="/projects">Explore system patterns</Link>
               <a className="button secondary" href="https://cwlwmsystems.vercel.app" target="_blank" rel="noreferrer">Visit Cwlwm Systems ↗</a>

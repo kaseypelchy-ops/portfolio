@@ -33,6 +33,11 @@ export default function ExperiencePage() {
         </div>
 
         <div className="role-callout">
+          <p className="eyebrow">Independent business</p>
+          <h2>Founder — Cwlwm Systems | August 2026 – Present</h2>
+          <p>I build websites and business applications for local businesses and community organizations through Cwlwm Systems, separately from my employment. Work includes Olson &amp; Tenglund, Port Petals, the Port Allegany Lions Club, a church website, and a Masonic lodge website.</p>
+        </div>
+        <div className="role-callout">
           <p className="eyebrow">How the portfolio is positioned</p>
           <h2>The system is more important than the industry where it was first built.</h2>
           <p>Each case study starts with the reusable business pattern — field coordination, performance intelligence, AI quality operations, location intelligence, or search visibility — and then shows the real implementation as proof. That makes the work easier to evaluate for employers and organizations outside the original business context.</p>
