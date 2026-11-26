@@ -349,8 +349,8 @@ select { border: 1px solid var(--line); border-radius: 10px; background: var(--p
 .evidence-list p { margin: 0; color: var(--muted); }
 .evidence-list i { color: var(--muted); font-size: .76rem; font-style: normal; font-weight: 800; }
 .certification-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.certification-grid a { position: relative; display: grid; grid-template-columns: 46px 1fr; gap: 16px; min-height: 210px; padding: 24px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,253,248,.8); transition: transform .18s ease, border-color .18s ease; }
-.certification-grid a:hover { transform: translateY(-3px); border-color: rgba(47,125,76,.46); }
+.certification-grid .certification-entry { position: relative; display: grid; grid-template-columns: 46px 1fr; gap: 16px; min-height: 210px; padding: 24px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,253,248,.8); transition: transform .18s ease, border-color .18s ease; }
+.certification-grid .certification-entry:hover { border-color: rgba(47,125,76,.46); }
 .cert-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--forest); color: white; font-weight: 900; }
 .certification-grid span { color: var(--lime); text-transform: uppercase; letter-spacing: .1em; font-size: .63rem; font-weight: 850; }
 .certification-grid h3 { margin: 9px 0 12px; font-size: 1.22rem; letter-spacing: -.025em; }
@@ -962,3 +962,5 @@ h1, h2 { letter-spacing: -.025em; }
   .page-intro { padding: 38px 28px 42px; border-radius: 22px; }
   .hero { min-height: auto; padding: 74px 0 80px; }
 }
+
+.certification-entry a { color: var(--forest); font-weight: 700; text-decoration: underline; }
