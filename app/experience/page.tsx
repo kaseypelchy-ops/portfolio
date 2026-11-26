@@ -34,7 +34,7 @@ export default function ExperiencePage() {
 
         <div className="role-callout">
           <p className="eyebrow">Independent business</p>
-          <h2>Founder — Cwlwm Systems</h2>
+          <h2>Founder — Cwlwm Systems | August 2026 – Present</h2>
           <p>I build websites and business applications for local businesses and community organizations through Cwlwm Systems, separately from my employment. Work includes Olson &amp; Tenglund, Port Petals, the Port Allegany Lions Club, a church website, and a Masonic lodge website.</p>
         </div>
         <div className="role-callout">
