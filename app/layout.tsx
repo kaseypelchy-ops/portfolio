@@ -6,10 +6,10 @@ import { TartanInteraction } from "@/components/TartanInteraction";
 
 export const metadata: Metadata = {
   title: {
-    default: "Kasey Pelchy — Business Systems, Data & Automation",
+    default: "Kasey Pelchy — Business Systems, HubSpot & RevOps",
     template: "%s | Kasey Pelchy"
   },
-  description: "Portfolio of reusable business-system patterns across operational software, decision intelligence, data, automation, AI, growth technology, and revenue operations.",
+  description: "HubSpot and Revenue Operations experience, custom business applications, data engineering, integrations, automation, and technical case studies.",
   icons: { icon: "/favicon.svg" }
 };
 
